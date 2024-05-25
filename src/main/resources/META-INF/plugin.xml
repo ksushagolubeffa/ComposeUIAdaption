@@ -1,0 +1,49 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.ComposeUIAdaption</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>ComposeUIAdaption</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+<!--    <actions>-->
+<!--        <action id="GenerateDimensionAction" class="com.example.composeuiadaption.action.GenerateAction"-->
+<!--                text="GenerateAction" description="GenerateAction">-->
+<!--            <add-to-group group-id="ToolsMenu" anchor="last"/>-->
+<!--            <keyboard-shortcut keymap="$default" first-keystroke="shift 6"/>-->
+<!--        </action>-->
+<!--    </actions>-->
+    <actions>
+        <action id="GenerateAction" class="com.example.composeuiadaption.action.GenerateAction" text="GenerateAction">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+
+<!--                <directory-index path="$PROJECT_DIR$/main/java"/>-->
+
+            <keyboard-shortcut keymap="$default" first-keystroke="shift 6"/>
+
+        </action>
+
+    </actions>
+</idea-plugin>
